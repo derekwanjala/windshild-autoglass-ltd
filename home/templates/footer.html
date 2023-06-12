@@ -1,0 +1,132 @@
+{% load static %}
+
+<!--Start footer bottom area-->
+<footer class="footer-area">
+  <div class="footer-middle">
+    <div class="container">
+      <div class="row">
+        <!--Start single footer widget-->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="single-footer-widget">
+            <div class="footer-logo">
+              <img
+                src="{% static 'img/resources/windshild-glass-limited-logo.png' %}"
+                height="62px"
+                width="256px"
+                alt="Wind Shild Glass Logo"
+              />
+            </div>
+            <div class="text">
+              <p>
+                Windshild Autoglass Limited is an officially registered company
+                in Kenya, specifically in Nairobi city's Industrial Area on
+                Bunyala Road. Established in July 2018, Windshild Autoglass
+                Limited operates as a limited liability company with a primary
+                focus on providing specialized services in the replacement of
+                motor vehicle windshields, sidefixes, quarter glass, door
+                frames, and various spare parts.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--End single footer widget-->
+        <!--Start single footer widget-->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="single-footer-widget">
+            <div class="sec-title text-left">
+              <h2>Quick Links</h2>
+              <span class="decor"></span>
+            </div>
+            <ul class="service-list">
+              <li>
+                <a href="{% url 'home:home' %}"
+                  ><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a
+                >
+              </li>
+              <li>
+                <a href="{% url 'about' %}"
+                  ><i class="fa fa-angle-right" aria-hidden="true"></i>About</a
+                >
+              </li>
+              <li>
+                <a href="{% url 'windshild' %}"
+                  ><i class="fa fa-angle-right" aria-hidden="true"></i
+                  >Windshild</a
+                >
+              </li>
+              <li>
+                <a href="{% url 'portfolio' %}"
+                  ><i class="fa fa-angle-right" aria-hidden="true"></i
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="{% url 'contact' %}"
+                  ><i class="fa fa-angle-right" aria-hidden="true"></i
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--End single footer widget-->
+        <!--Start single footer widget-->
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+          <div class="single-footer-widget">
+            <div class="sec-title text-left">
+              <h2>Important Tags</h2>
+              <span class="decor"></span>
+            </div>
+            <ul class="tags-list">
+              <li><a href="">Wheel</a></li>
+              <li><a href="">Brakes</a></li>
+              <li><a href="">Air</a></li>
+              <li><a href="">Painting</a></li>
+              <li><a href="">Mechanic</a></li>
+            </ul>
+            <h3>Working Hours:</h3>
+            <p class="working-hours-weekdays">
+              Weekdays: 09.00am to 6.00pm <br />
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+        <!--End single footer widget-->
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="copy-right">
+            <p>
+              &copy; {% now "Y" %} Windshild Autoglass Limited. All Rights
+              Reserved by
+              <a href="https://www.codeworldcreatives.com">Ad-Mastaz</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="footer-social-link">
+            <ul>
+              <li>
+                <a href="#"><i class="flaticon-facebook-letter-logo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="flaticon-google-plus-logo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="flaticon-linkedin-logo"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--End footer bottom area-->

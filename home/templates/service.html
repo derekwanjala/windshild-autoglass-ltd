@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+		<title>Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited</title>
+		<link rel="canonical" href="https://www.windshildautoglass.com{{request.path}}">
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited" />
+		<meta property="og:description" content="Windshild Autoglass Limited, your reliable windscreen repair in Nairobi." />
+		<meta property="og:url" content="https://windshildautoglass.com/" />
+		<meta property="og:site_name" content="QuickPay Credit Limited" />
+		<meta property="article:publisher" content="https://www.facebook.com/windshildautoglass" />
+		<meta property="og:image" content="https://windshildautoglass.com/static" />
+		<meta property="og:image:width" content="960" />
+		<meta property="og:image:height" content="959" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@windshildautoglass" />
+		{% endblock meta %}
+
+{% block content %}
+
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumbs text-center">
+                    <h1>Our Services</h1>
+                    <h4>We Are Provide 100% Services to Our Customers</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+    
+<!--Start breadcrumb bottom area--> 
+<section class="breadcrumb-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-5 col-sm-5">
+                <ul>
+                    <li><a href="{% url 'home:home' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Services</li> 
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-7">
+                <p>We are here to provide 100% services to our customers</p>
+            </div>
+        </div>
+    </div>
+</section>    
+<!--End breadcrumb bottom area-->
+    
+<!--Start full range services area-->
+<section class="full-range-services-area">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h1>Full Range Of Services</h1>
+            <span class="decor"></span>
+        </div>
+        <div class="row">
+            <!--Start single item-->
+            {% for rs in services %}
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="single-item">
+                    <div class="inner-content text-center">
+                        {% comment %} <div class="icon-holder">
+                            <span class="{{ rs.icon.url }}"></span>
+                        </div> {% endcomment %}
+                        <div class="content">
+                            <h3>{{ rs.title }}</h3>
+                            <p>{{ rs.short_detail }}</p>
+                        </div>
+                        <div class="overlay">
+                            <img src="{{ rs.image.url }}" alt="{{ rs.alt }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!--End single item-->
+    </div>
+</section>   
+<!--End full range services area--> 
+    
+<!--Start contact area-->
+<section class="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-form">
+                        <div class="sec-title text-left">
+                            <h1>Send Message Us</h1>
+                            <span class="decor"></span>
+                        </div>
+                        <form method="POST" action="{% url 'windshild' %}">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Your Name*">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="email" placeholder="Email Address*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="phone" placeholder="Phone">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="subject" placeholder="Subject*">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <textarea name="message" placeholder="Message*"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>    
+                </div>
+            </div>
+        </div>
+</section>      
+<!--End contact area-->
+
+{% endblock content %}

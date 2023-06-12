@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+		<title>{{ service.title }} | Windshild Autoglass Limited</title>
+		<link rel="canonical" href="https://www.windshildautoglass.com{{request.path}}">
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited" />
+		<meta property="og:description" content="Windshild Autoglass Limited, your reliable windscreen repair in Nairobi." />
+		<meta property="og:url" content="https://windshildautoglass.com/" />
+		<meta property="og:site_name" content="QuickPay Credit Limited" />
+		<meta property="article:publisher" content="https://www.facebook.com/windshildautoglass" />
+		<meta property="og:image" content="https://windshildautoglass.com/static" />
+		<meta property="og:image:width" content="960" />
+		<meta property="og:image:height" content="959" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@windshildautoglass" />
+		{% endblock meta %}
+
+{% block content %}
+
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumbs text-center">
+                        <h1>{{ service.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End breadcrumb area-->
+    <!--Start breadcrumb bottom area-->
+    <section class="breadcrumb-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-5 col-sm-5">
+                    <ul>
+                        <li><a href="{% url 'home:home' %}">Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><a href="{% url 'windshild' %}">Services</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li>{{ service.title }}</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-7">
+                    <p>We are here to provide 100% services to our customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End breadcrumb bottom area-->
+    <!--Start services single area-->
+    <section class="services-single-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-right">
+                    <div class="services-single-content">
+                        <div id="services-single-carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#services-single-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#services-single-carousel" data-slide-to="1"></li>
+                                <li data-target="#services-single-carousel" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <div class="single-item">
+                                        <div class="img-holder">
+                                            <img src="{{ service.image.url }}" height="450px !important" width="870px !important" alt="{{ service.alt }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="single-item">
+                                        <div class="img-holder">
+                                            <img src="{{ service.image_1.url }}" height="450px !important" width="870px !important" alt="{{ service.alt_1 }}">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="single-item">
+                                        <div class="img-holder">
+                                            <img src="{{ service.image_2.url }}" alt="{{ service.alt_2 }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="sec-title text-left">
+                                <h1>{{ service.title }}</h1>
+                                <span class="decor"></span>
+                            </div>
+                            <p class="top-text">{{ service.detail | safe }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End services single area-->
+
+{% endblock content %}

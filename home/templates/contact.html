@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block meta %}
+		<title>Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited</title>
+		<link rel="canonical" href="https://www.windshildautoglass.com{{request.path}}">
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited" />
+		<meta property="og:description" content="Windshild Autoglass Limited, your reliable windscreen repair in Nairobi." />
+		<meta property="og:url" content="https://windshildautoglass.com/" />
+		<meta property="og:site_name" content="QuickPay Credit Limited" />
+		<meta property="article:publisher" content="https://www.facebook.com/windshildautoglass" />
+		<meta property="og:image" content="https://windshildautoglass.com/static" />
+		<meta property="og:image:width" content="960" />
+		<meta property="og:image:height" content="959" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@windshildautoglass" />
+		{% endblock meta %}
+
+{% block content %}
+
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumbs text-center">
+                    <h1>Get Touch With Us</h1>
+                    <h4>We Are Here For You</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+    
+<!--Start breadcrumb bottom area--> 
+<section class="breadcrumb-bottom-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-5 col-sm-5">
+                <ul>
+                    <li><a href="{% url 'home:home' %}">Home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Contact</li> 
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-7">
+                <p>We are here to provide 100% services to our customers</p>
+            </div>
+        </div>
+    </div>
+</section>    
+<!--End breadcrumb bottom area-->
+    
+<!--Start contact area-->
+<section class="contact-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="getin-touch">
+                    <div class="sec-title text-left">
+                        <h1>Get In Touch</h1>
+                        <span class="decor"></span>
+                    </div>
+                    <h2>We&#39;re Here <br> Let&#39;s Talk</h2>
+                    <ul class="contact-info">
+                        <li class="address">
+                            <div class="icon-holder">
+                                <span class="flaticon-map"></span>
+                            </div>
+                            <div class="content">
+                                <h4>Address :</h4>
+                                <p>Car Wash, Bunyala Road, Nairobi, Kenya</p>
+                            </div>
+                        </li>
+                        <li class="email">
+                            <div class="icon-holder">
+                                <span class="flaticon-note"></span>
+                            </div>
+                            <div class="content">
+                                <h4>Ask Anything Here :</h4>
+                                <p>windshildglass@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-holder">
+                                <span class="flaticon-telephone"></span>
+                            </div>
+                            <div class="content">
+                                <h4>Call Us:</h4>
+                                <p>+254 743 055 367</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <div class="sec-title text-left">
+                        <h1>Send Message Us</h1>
+                        <span class="decor"></span>
+                    </div>
+                    <form method="POST" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="name" placeholder="Your Name*">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="email" placeholder="Email Address*">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" name="phone" placeholder="Phone">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="subject" placeholder="Subject*">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea name="message" placeholder="Message*"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>    
+            </div>
+        </div>
+    </div>
+</section>      
+<!--End contact area-->
+    
+    
+{% comment %} <div 
+  class="google-map" 
+  id="contact-google-map" 
+  data-map-lat="-1.2987618784169856" 
+  data-map-lng="36.82647328650689" 
+  data-icon-path="img/resources/map-marker.png"
+  data-map-title="Car Wash, Bunyala Road"
+  data-map-zoom="12"
+  data-markers='{
+            "marker-1": [-1.2987618784169856, 36.82647328650689, "<h4>Windshild Autoglass</h4><p>Bunyala Road, Nairobi, Kenya</p>"],
+        }'>
+
+</div> {% endcomment %}
+
+{% endblock content %}

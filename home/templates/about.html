@@ -1,0 +1,325 @@
+{% extends 'base.html' %} {% load static %} 
+
+{% block meta %}
+		<title>Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited</title>
+		<link rel="canonical" href="https://www.windshildautoglass.com{{request.path}}">
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Nairobi&#39;s Number One Windshield Repair Services | Windshild Autoglass Limited" />
+		<meta property="og:description" content="Windshild Autoglass Limited, your reliable windscreen repair in Nairobi." />
+		<meta property="og:url" content="https://windshildautoglass.com/" />
+		<meta property="og:site_name" content="QuickPay Credit Limited" />
+		<meta property="article:publisher" content="https://www.facebook.com/windshildautoglass" />
+		<meta property="og:image" content="https://windshildautoglass.com/static" />
+		<meta property="og:image:width" content="960" />
+		<meta property="og:image:height" content="959" />
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@windshildautoglass" />
+		{% endblock meta %}
+
+{% block content %}
+
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="breadcrumbs text-center">
+          <h1>About Windshild Autoglass</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start breadcrumb bottom area-->
+<section class="breadcrumb-bottom-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-5 col-sm-5">
+        <ul>
+          <li><a href="{% url 'home:home' %}">Home</a></li>
+          <li><i class="fa fa-angle-right"></i></li>
+          <li>About</li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-7 col-sm-7">
+        <p>We are here to provide 100% services to our customers</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End breadcrumb bottom area-->
+
+<!--Start customers area-->
+<section class="customers-area">
+  <div class="container">
+    <div class="row">
+      {% for rs in about %}
+      <div class="col-lg-9 col-md-8">
+        <div class="customers-info">
+          <div class="sec-title text-left">
+            <h1>Know About Us</h1>
+            <span class="decor"></span>
+          </div>
+          <div class="img-holder">
+            <img src="{{ rs.image.url }}" alt="{{ rs.alt }}" />
+          </div>
+          <div class="content">
+            <h3>{{ rs.title }}</h3>
+            <p>{{ rs.detail | safe }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="col-lg-3 col-md-4">
+        <div class="customer-support">
+          <h4>24/7 Customer Support.</h4>
+          <p>
+            Windshild Autoglass is your ONE STOP<br />
+            solution bringing best car services.
+          </p>
+          <h3><span class="flaticon-telephone"></span>+254743055367</h3>
+          <div class="info-box text-center">
+            <p>Mob: +254743055367</p>
+            <p>Email: windshildglass@gmail.com</p>
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="#"><i class="flaticon-facebook-letter-logo"></i></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="flaticon-twitter-logo-silhouette"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="flaticon-google-plus-logo"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End customers area-->
+
+<!--Start trusted service area-->
+<section class="trusted-service-area">
+  <div class="container">
+    <div class="row">
+      <!--Start single item-->
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-social"></span>
+          </div>
+          <div class="content">
+            <h3>Vision</h3>
+            <p>
+              Our vision is to be the leading global motor vehicle service
+              center.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+      <!--Start single item-->
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-wrench"></span>
+          </div>
+          <div class="content">
+            <h3>Mission</h3>
+            <p>
+              be market leaders in Windscreen repair and motor vehicle spare
+              parts by;
+            </p>
+            <ul>
+              <li>
+                Providing best solution to insurance companies; motor vehicle
+                owners on windscreen claims management.
+              </li>
+              <li>Being focused on providing client specific solutions.</li>
+              <li>Being efficient and effective in service delivery.</li>
+              <li>Maintain world class business performance standard.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+    </div>
+  </div>
+</section>
+<!--End trusted service area-->
+
+<!--Start why choose us area-->
+<section class="why-choose-us-area">
+  <div class="container">
+    <div class="sec-title text-center">
+      <h1>Why Choose Us</h1>
+      <span class="decor"></span>
+    </div>
+    <div class="row">
+      <!--Start single item-->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-social"></span>
+          </div>
+          <div class="content">
+            <h3>100% Transparency</h3>
+            <p>
+              We ensure that you get a well detailed break-up of each minor
+              repair work
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+      <!--Start single item-->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-wrench"></span>
+          </div>
+          <div class="content">
+            <h3>Genuine Spare Parts</h3>
+            <p>
+              We useuthorized genuine spare parts &amp; accessories to ensure
+              that your
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+      <!--Start single item-->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-map"></span>
+          </div>
+          <div class="content">
+            <h3>Trusted &amp; Quality Service</h3>
+            <p>
+              You can avail our free pickup &amp; drop so that you can just sit
+              &amp; relax
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+      <!--Start single item-->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-interface-2"></span>
+          </div>
+          <div class="content">
+            <h3>Friendly &#38; Helpfull Team</h3>
+            <p>
+              We are a friendly &#38; helpful professional group of people in
+              autocare.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+      <!--Start single item-->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-transport-2"></span>
+          </div>
+          <div class="content">
+            <h3>free Pickup &#38; Drop</h3>
+            <p>
+              You can avail our free pickup &#38; drop so that you can just sit
+              &#38; relax.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+      <!--Start single item-->
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-item">
+          <div class="icon-holder">
+            <span class="flaticon-money"></span>
+          </div>
+          <div class="content">
+            <h3>Zero Upselling</h3>
+            <p>
+              You can see servicing cost upfront our Service Calculator. Only
+              additional.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--End single item-->
+    </div>
+  </div>
+</section>
+<!--End why choose us area-->
+
+<!--Start Brand area-->
+<section class="brand-area about-us-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="brand">
+          <!--Start single item-->
+          <div class="single-item">
+            <a href="#"
+              ><img src="img/brand/1.png" alt="Awesome Brand Image"
+            /></a>
+          </div>
+          <!--End single item-->
+          <!--Start single item-->
+          <div class="single-item">
+            <a href="#"
+              ><img src="img/brand/2.png" alt="Awesome Brand Image"
+            /></a>
+          </div>
+          <!--End single item-->
+          <!--Start single item-->
+          <div class="single-item">
+            <a href="#"
+              ><img src="img/brand/3.png" alt="Awesome Brand Image"
+            /></a>
+          </div>
+          <!--End single item-->
+          <!--Start single item-->
+          <div class="single-item">
+            <a href="#"
+              ><img src="img/brand/4.png" alt="Awesome Brand Image"
+            /></a>
+          </div>
+          <!--End single item-->
+          <!--Start single item-->
+          <div class="single-item">
+            <a href="#"
+              ><img src="img/brand/5.png" alt="Awesome Brand Image"
+            /></a>
+          </div>
+          <!--End single item-->
+          <!--Start single item-->
+          <div class="single-item">
+            <a href="#"
+              ><img src="img/brand/6.png" alt="Awesome Brand Image"
+            /></a>
+          </div>
+          <!--End single item-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Brand area-->
+
+{% endblock content %}

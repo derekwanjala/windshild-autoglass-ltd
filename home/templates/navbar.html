@@ -1,0 +1,69 @@
+{% load static %}
+
+    <!--Start header area-->
+    <header class="main-header stricky">
+        <!--Start header top-->
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
+                            <div class="header-contact-info">
+                                <ul>
+                                    <li><a href="tel:+254743055367"><i class="flaticon-telephone"></i>Customer Support: +254 743 055 367</a></li>
+                                    <li><a href="mailto:windshildglass@gmail.com"><i class="flaticon-interface-1"></i>windshildglass@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12">
+                            <div class="social-links">
+                                <ul>
+                                    <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-google-plus-logo"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-linkedin-logo"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End header top-->
+
+        <nav class="header-lower navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'home:home' %}"><img src="{% static 'img/resources/windshild-glass-limited-logo.png' %}" height="62px" width="256px" alt="Wind Shild Glass Logo"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="{% url 'home:home' %}">Home <span class="decor"></span></a></li>
+                        <li><a href="{% url 'about' %}">About <span class="decor"></span></a></li>
+                        <li class="dropdown">
+                            <a href="{% url 'windshild' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="true">Services <span class="decor"></span></a>
+                            <ul class="dropdown-menu">
+                                {% for rs in services %}
+                                <li {% if service.slug == rs.slug %} class="selected" {% endif %}><a href="{{ rs.get_absolute_url }}">{{ rs.title }}</a></li>{% endfor %}
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'portfolio' %}">Our Work <span class="decor"></span></a></li>
+                        <li><a href="{% url 'contact' %}">Contact <span class="decor"></span></a></li>
+                    </ul>
+                                        
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    </header>
+    <!--End header area-->
